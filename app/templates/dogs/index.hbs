@@ -10,4 +10,13 @@
       {{/link-to}}
     {{/each}}
    </ul>
+   <form {{action createDog on="submit"}}>
+     {{input value=dogName placeholder="Name"}}
+     <br>
+     {{input value=dogAge placeholder="Age"}}
+     <br>
+     {{input value=dogPhoto placeholder="Photo Url"}}
+     <br>
+     {{input type="submit"}}
+   </form>
 </div>
