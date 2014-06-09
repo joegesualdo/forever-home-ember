@@ -15,9 +15,10 @@ var app = new EmberApp({
 
 // Use this to add additional libraries to the generated output files.
 app.import('vendor/ember-data/ember-data.js');
-
 // Add bootstrap javascript. TODO: Remove unused pars of the bootsrap javaascript
 app.import('vendor/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/dropdown.js');
+// Add localstorage adapter
+app.import('vendor/localstorage-adapter/localstorage_adapter.js');
 
 // If the library that you are including contains AMD or ES6 modules that
 // you would like to import into your application please specify an

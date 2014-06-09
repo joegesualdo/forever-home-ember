@@ -1,11 +1,31 @@
+<div class="col-md-3">
+  {{input value=searchTerm placeholder="Dog's Name"}}
+  <hr>
+  Male {{input type="checkbox" checked=male}}
+  <br>
+  Female {{input type="checkbox" checked=female}}
+  <hr>
+  Puppy {{input type="checkbox" checked=puppy}}
+  <br>
+  Adolescent {{input type="checkbox" checked=adolescent}}
+  <br>
+  Adult {{input type="checkbox" checked=adult}}
+  <br>
+  Senior {{input type="checkbox" checked=senior}}
+  <hr>
+  {{input value=color placeholder="Dog's Color"}}
+</div>
 <div class="col-md-9">
    <ul>
-    {{#each}}
+    {{#each results}}
       {{#link-to "dogs.show" this}}
          <li>
             <span class="photo"><img {{bind-attr src=photo}} class="img-thumbnail" style="width: 50px; height: 50px"></span>
             <span class="name">Name: {{name}} </span>
             <span class="age">Age: {{age}} </span>
+            <span class="sex">Sex: {{sex}} </span>
+            <span class="weight">Weight: {{weight}} </span>
+            <span class="color">color: {{color}} </span>
          </li>
       {{/link-to}}
     {{/each}}
