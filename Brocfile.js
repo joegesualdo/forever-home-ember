@@ -17,6 +17,17 @@ var app = new EmberApp({
 app.import('vendor/ember-data/ember-data.js');
 // Add bootstrap javascript. TODO: Remove unused pars of the bootsrap javaascript
 app.import('vendor/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/dropdown.js');
+app.import('vendor/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/affix.js');
+app.import('vendor/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/alert.js');
+app.import('vendor/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/button.js');
+app.import('vendor/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/carousel.js');
+app.import('vendor/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/collapse.js');
+app.import('vendor/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/modal.js');
+app.import('vendor/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/popover.js');
+app.import('vendor/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/scrollspy.js');
+app.import('vendor/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/tab.js');
+app.import('vendor/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/tooltip.js');
+app.import('vendor/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/transition.js');
 // Add localstorage adapter
 app.import('vendor/localstorage-adapter/localstorage_adapter.js');
 
