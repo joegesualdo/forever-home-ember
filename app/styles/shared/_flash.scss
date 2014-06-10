@@ -1,0 +1,16 @@
+.flash_notice{
+  @extend .alert;
+  @extend .alert-info;
+}
+.flash_alert{
+  @extend .alert;
+  @extend .alert-warning;
+}
+.flash_error{
+  @extend .alert;
+  @extend .alert-danger;
+}
+.flash_success{
+  @extend .alert;
+  @extend .alert-success;
+}

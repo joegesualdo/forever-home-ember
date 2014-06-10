@@ -1,6 +1,25 @@
 @import 'vendor/bootstrap-sass-official/vendor/assets/stylesheets/bootstrap';
 
+// @import 'normalize';
+
+@import 'base/palette';
+@import 'base/fonts';
+@import 'base/base';
+
+@import 'shared/pickadate';
+@import 'shared/flash';
+@import 'shared/select';
+@import 'shared/buttons';
+@import 'shared/three_step';
+
+@import 'layout/header';
+@import 'layout/footer';
+
+@import 'pages/home';
+
 // Dog Filter
 .dropdown-menu.dog-age{
   width: 400px;
 }
+
+

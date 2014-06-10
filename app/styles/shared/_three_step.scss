@@ -1,0 +1,30 @@
+section.three-step{
+  .step{
+    padding: 60px 30px;
+    text-align: center;
+    &:nth-child(odd) {
+      background: $very-light-grey;
+    }
+    @media (max-width: $screen-xs-max) { 
+      padding: 60px 20%;
+    }
+  }
+  .step__image{
+    img {
+      // Centers div hoizontally
+      // http://stackoverflow.com/questions/618097/how-do-you-easily-horizontally-center-a-div-using-css
+      width: 400;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+  .step__title{
+    font-size: 22px;
+    font-weight: 700;
+    margin: 30px 0 10px 0;
+  }
+  .step__text{
+    font-size: 16px;
+  }
+}

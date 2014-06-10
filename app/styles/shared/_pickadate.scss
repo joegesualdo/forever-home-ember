@@ -1,0 +1,7 @@
+.picker__frame{
+  margin-bottom: 100px; // To prevent pickadate calendar from touching bottom of screen
+}
+.picker__nav--prev, .picker__nav--next{
+  height: auto;
+  width: auto;
+}

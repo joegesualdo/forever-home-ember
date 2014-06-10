@@ -1,0 +1,12 @@
+.btn{
+  border-radius: 0px;
+}
+
+.btn-primary{
+ background-color: $bright-blue;
+ border: none;
+ &:hover{
+   background-color: $dark-blue;
+   border: none;
+ }
+}

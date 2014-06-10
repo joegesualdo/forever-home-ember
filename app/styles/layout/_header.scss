@@ -1,0 +1,42 @@
+.navbar-brand{
+  font-family: 'lobster';
+  font-size: 35px;
+  font-weight: 200;  
+}
+.navbar{
+  margin: 0;
+}
+.navbar, .dropdown-menu{
+  background-color: $medium-grey;
+  border:none;
+  border-radius: 0;
+  font-size: 1.1em;
+  font-weight: 600;
+}
+
+.navbar.navbar-default.fixed-static-top a {
+  color: white;
+  background-color: $medium-grey;
+  transition: background-color 0.4s ease;
+  &:hover{
+    color: white;
+    background-color: $dark-grey;
+  }
+}
+
+.navbar-collapse.collapse > ul > li.dropdown.open > a {
+    color: white;
+    background-color: $dark-grey;
+}
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+color: white;;
+}
+.navbar.navbar-default.fixed-static-top > div > div.navbar-collapse.collapse.in > ul > li.dropdown.open > ul > li > a {
+  color: white;
+  background-color: $medium-grey;
+  transition: background-color 0.4s ease;
+  &:hover{
+    color: white;
+    background-color: $dark-grey;
+  }
+}
