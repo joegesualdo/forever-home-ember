@@ -27,12 +27,15 @@ export default Ember.ArrayController.extend({
          return dog.get('color').toLowerCase().indexOf(color.toLowerCase()) > -1;
        });
      }
-     if (male){
+     // Filter by male, female, or both
+     if (male && female){
+       return results;
+     } else if (male){
       results = results.filterBy('sex', 'male');
-     }
-     if (female){
+     } else if (female){
       results = results.filterBy('sex', 'female');
      }
+
      if (puppy){
       results = results.filter(function(dog){
         return dog.get('age') < 2;
@@ -57,8 +60,28 @@ export default Ember.ArrayController.extend({
      return results;  
   }.property('model', 'searchTerm', 'male', 'female', 'puppy', 'adolescent', 'adult', 'senior', 'color'),
   
+  genderTitle: function(){
+    if (this.get('male') && !this.get('female')){
+      return 'Male';
+    } else if (this.get('female') && !this.get('male')){
+      return 'Female';
+    } else if (this.get('male') && this.get('female')){
+      return 'Male & Female';
+    } else {
+      return 'Gender';
+    }
+  }.property('male', 'female'),
+  
   // Actions ====================================================
   actions: {
+    // Filter actions
+    setMale: function(){
+      this.toggleProperty('male');
+    },
+    setFemale: function(){
+      this.toggleProperty('female');
+    },
+
     createDog: function(){
       // Create a new dog
       var dog = this.store.createRecord('dog', {

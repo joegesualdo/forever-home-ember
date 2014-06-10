@@ -1,0 +1,22 @@
+{{input value=searchTerm placeholder="Dog's Name"}}
+<div class="btn-group">
+  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+    {{genderTitle}}
+    <span class="caret"></span>
+  </button>
+  <div class="dropdown-menu">
+    <div class="btn-group btn-group-justified">
+      <div class="btn-group">
+        <button type="button" {{bind-attr class=":btn :btn-default male:active"}}class="btn btn-default"{{action setMale}}>Male</button>
+      </div>
+      <div class="btn-group">
+        <button type="button" {{bind-attr class=":btn :btn-default female:active"}}class="btn btn-default"{{action setFemale}}>Female</button>
+      </div>
+    </div>
+  </div>
+</div>
+Puppy {{input type="checkbox" checked=puppy}}
+Adolescent {{input type="checkbox" checked=adolescent}}
+Adult {{input type="checkbox" checked=adult}}
+Senior {{input type="checkbox" checked=senior}}
+{{input value=color placeholder="Dog's Color"}}

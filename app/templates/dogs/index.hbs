@@ -1,21 +1,7 @@
-<div class="col-md-3">
-  {{input value=searchTerm placeholder="Dog's Name"}}
-  <hr>
-  Male {{input type="checkbox" checked=male}}
-  <br>
-  Female {{input type="checkbox" checked=female}}
-  <hr>
-  Puppy {{input type="checkbox" checked=puppy}}
-  <br>
-  Adolescent {{input type="checkbox" checked=adolescent}}
-  <br>
-  Adult {{input type="checkbox" checked=adult}}
-  <br>
-  Senior {{input type="checkbox" checked=senior}}
-  <hr>
-  {{input value=color placeholder="Dog's Color"}}
+<div class="col-md-12">
+  {{partial 'dogs/filter'}}
 </div>
-<div class="col-md-9">
+<div class="col-md-12">
    <ul>
     {{#each results}}
       {{#link-to "dogs.show" this}}
