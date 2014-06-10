@@ -36,6 +36,7 @@ export default Ember.ArrayController.extend({
       results = results.filterBy('sex', 'female');
      }
 
+     // Filter by age TODO: This is not functioning correctly
      if (puppy){
       results = results.filter(function(dog){
         return dog.get('age') < 2;
@@ -71,15 +72,41 @@ export default Ember.ArrayController.extend({
       return 'Gender';
     }
   }.property('male', 'female'),
+
+  ageTitle: function(){
+    return "Age";
+    // if (this.get('male') && !this.get('female')){
+    //   return 'Male';
+    // } else if (this.get('female') && !this.get('male')){
+    //   return 'Female';
+    // } else if (this.get('male') && this.get('female')){
+    //   return 'Male & Female';
+    // } else {
+    //   return 'Gender';
+    // }
+  }.property('male', 'female'),
+  
   
   // Actions ====================================================
   actions: {
     // Filter actions
-    setMale: function(){
+    checkMale: function(){
       this.toggleProperty('male');
     },
-    setFemale: function(){
+    checkFemale: function(){
       this.toggleProperty('female');
+    },
+    checkPuppy: function(){
+      this.toggleProperty('puppy');
+    },
+    checkAdolescent: function(){
+      this.toggleProperty('adolescent');
+    },
+    checkAdult: function(){
+      this.toggleProperty('adult');
+    },
+    checkSenior: function(){
+      this.toggleProperty('Senior');
     },
 
     createDog: function(){
